@@ -50,6 +50,14 @@ https://www.cfr.org/cyber-operations/apt-34
 https://www.darkreading.com/ics-ot-security/iran-oilrig-cyberattackers-target-israel-critical-infrastructure
 summary source
 
+## unit 42
+2019
+https://unit42.paloaltonetworks.com/behind-the-scenes-with-oilrig/
+
+## industrial cybersecurity pulse
+2023
+https://www.industrialcybersecuritypulse.com/threats-vulnerabilities/throwback-attack-iranian-backed-oilrig-targets-critical-infrastructure-in-the-middle-east/
+
 
 # Research
 ## general info
