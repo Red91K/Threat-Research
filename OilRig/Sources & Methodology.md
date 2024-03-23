@@ -1,93 +1,113 @@
 
 
 # research scope & details
-audience: general public
+audience: 
+1. Policymakers & Business Executives
+2. Defenders
 
 ## dissemination
-- slide deck
+- slide deck for policymakers / buisness executives
 - written TA report for defenders
-- attack flow on case study / general TTPs
-- written case study report
-- diamond model?
+- report on a specific campaign for defenders, mapping TTPs to 
+	- attack flow
+	- attack matrix
+	- diamond model
+	- kill chain
 
 ## intel requirements
 ### Who is OilRig? 
-- General information
-- Attribution
-- Capabilities
--> Hackers are not all the same; they range in skill, resources, and capability and often go by different names. How would you classify this threat actor? Do they go by any aliases? Where are they from? How would you rate the skill level and resources available to this threat actor? 
+- General information, Attribution, Capabilities
+> Hackers are not all the same; they range in skill, resources, and capability and often go by different names. How would you classify this threat actor? Do they go by any aliases? Where are they from? How would you rate the skill level and resources available to this threat actor? 
 
-- Intent /Motivation
-- Geopolitical context
--> Hackers are motivated to act for specific reasons. What are the motivations of your threat actor? What is the specific geo-political context they are operating in and what insight does that give you for why they are operating in this manner? 
+- Motivation, Targeting, Geopolitical context
+> Hackers are motivated to act for specific reasons. What are the motivations of your threat actor? What is the specific geo-political context they are operating in and what insight does that give you for why they are operating in this manner?
 
 ### What are OilRig's TTPs?
-Hackers utilize specific tradecraft, tactics, and processes to act on their motivations. Describe the range of efforts used by your threat actor to engage in the hacking process. Utilize the Lockheed Martin Kill Chain to help describe those efforts.
-
-Hackers utilize the hacking process to achieve certain “end-effects” on their target. Provide examples or case studies of attacks your threat actor has been involved with over the years and describe their primary, secondary, and second order effects.
+> Hackers utilize specific tradecraft, tactics, and processes to act on their motivations. Describe the range of efforts used by your threat actor to engage in the hacking process. Utilize the Lockheed Martin Kill Chain to help describe those efforts.
+> Hackers utilize the hacking process to achieve certain “end-effects” on their target. Provide examples or case studies of attacks your threat actor has been involved with over the years and describe their primary, secondary, and second order effects.
 
 ### Defensive reccomendations?
-Not all hackers represent a strategic problem for policy makers. How would you characterize your threat actor, are they chiefly a private problem for businesses or a public concern for policy makers? How should policy makers respond? 
+> Not all hackers represent a strategic problem for policy makers. How would you characterize your threat actor, are they chiefly a private problem for businesses or a public concern for policy makers? How should policy makers respond? 
 
 # sources
--> open-source & TLP:clear information
+-> compilation of TLP:clear sources, each covering a spefic Intelligence Requirement / visibility
 
-## malpedia
-https://malpedia.caad.fkie.fraunhofer.de/actor/oilrig
--> General information & links to other sources
-Reliablility: Reliable, summarizes other sources therefore depends on reliability of cited.
-Managed by Fraunhofer Society for the Advancement of Applied Research, a german research institution.
+## Malpedia - OilRig Threat Actor Profile
+[OilRig (Threat Actor)](https://malpedia.caad.fkie.fraunhofer.de/actor/oilrig)
+#### Source Reliability: 
+- Malpedia seems to be a pretty well repudiated source, managed by Fraunhofer Society for the Advancement of Applied Research
+- It is a **secondary source**, but it features extensive citations from reliable sources. When referencing information from this source, cite the primarily source that is cited.
 
-### PIR: Who is Oilrig?
-- Attribution: Iranian threat actor !  TODO
-- Targeting
-	- Primarily targets Middle Eastern organizations, but occasionally orgs outside the middle east
-	- Specifically targets organizations chosen for strategic purposes, instead of targets of opportunity
-- Capabilities:
-	- highly active and organized (! no direct evidence provided)
-	- 
-
-### PIR: What are Oilrig's TTPs?
-- OilRig has been seen carrying out supply chain attacks
-- Leverages unsophisticated initial access techniques: primarily relies on social engineering (T1566), but sometimes...
-	-  exploitation of patched vulnerabilities (T1190)
-	- using credentials to access public facing services like outlook web access (T1078) 
-	- supply chain compromises (T1195)
-- Shows sophistication in post-exploitation techniques: 
-	- defense evasion: organized evasion testing used the during development of their tools.
-	- c2: Use of custom DNS Tunneling protocols for command and control (C2) and data exfiltration. 
-	- persistence: Custom web-shells and backdoors used to persistently access servers. 
-	- lateral movement: OilRig relies on stolen account credentials for lateral movement. (T1078, 
-	- execution: after moving laterally with stolen credentials, OilRig preferrs to use lolbins like 
-
-### PIR: Defensive Reccomendations?
-
+#### Executive Summary
+- Malpedia asserts that OilRig is a highly active and organized threat actor that was attributed to the Iranian government by FireEye in 2014. 
+- OilRig primarily targets Middle Eastern organizations in various industries using social engineering attacks. 
+- However, OilRig has also used n-day vulnerabilities, supply chain attacks, and leaked credentials to gain initial access to organizations. 
+- Once OilRig gains access, they aim to evade defenses, move laterally, and gain persistance using various sophisticated techniques like conducting evasion testing of tools, using custom DNS-based c2 frameworks (`T1071.004`), custom webshells to persist on servers (`T1505`), and lateral movement with dumped credentials (`TA0006`, `T1078`). 
 
 ## etda
 -> great overview, references other sources to create a comprehensive timeline of attacks and responses
-https://apt.etda.or.th/cgi-bin/showcard.cgi?g=OilRig%2C%20APT%2034%2C%20Helix%20Kitten%2C%20Chrysene
+[OilRig, APT 34, Helix Kitten, Chrysene - Threat Group Cards: A Threat Actor Encyclopedia](https://apt.etda.or.th/cgi-bin/showcard.cgi?g=OilRig%2C%20APT%2034%2C%20Helix%20Kitten%2C%20Chrysene)
 
-## attackiq
-https://www.attackiq.com/2022/07/11/oilrig-attack-graphs-emulating-the-iranian-threat-actors-global-campaigns/
+Source Reliability: 
+- ETDA (Electronic Transactions Development Agency) is a Thailand government agency
+- Not necessarily famous as a Threat Intelligence producer, but records show they track 
+- ETDA states that they track threat actors exclusively using OSINT, mainly from the following sources: MISP Threat Actors galaxy, MITRE ATT&CK Groups, Malpedia, AlienVault OTX. 
+
 
 ## cfr
 https://www.cfr.org/cyber-operations/oilrig
 https://www.cfr.org/cyber-operations/apt-34
 
-## ESET
-https://www.welivesecurity.com/en/eset-research/oilrig-persistent-attacks-cloud-service-powered-downloaders/
-2023
-
 ## unit 42
 2019
 https://unit42.paloaltonetworks.com/behind-the-scenes-with-oilrig/
 
-## industrial cybersecurity pulse
-2023
-https://www.industrialcybersecuritypulse.com/threats-vulnerabilities/throwback-attack-iranian-backed-oilrig-targets-critical-infrastructure-in-the-middle-east/
+## ESET
+[OilRig’s persistent attacks using cloud service-powered downloaders](https://www.welivesecurity.com/en/eset-research/oilrig-persistent-attacks-cloud-service-powered-downloaders/)
+2023, Specific case study of an OilRig campaign
+
+## attackiq
+Opportunities for detection
+https://www.attackiq.com/2022/07/11/oilrig-attack-graphs-emulating-the-iranian-threat-actors-global-campaigns/
 
 
-# Research
-## general info
-First identified by Symantec in 2012 -- Attack IQ 
-Recently clustered / attributed w/ apt34
+# Overall
+## PIR: Who is Oilrig?
+### General Information
+### Attribution
+- FireEye attributed OilRig to the Iranian government in 2014, based on their use of infrastructure tied to Iranian operations as well as timing and alignment with the national interests of Iran. (MALPEDIA)
+
+### Capabilities
+- highly active and organized (MALPEDIA)
+- 
+
+### Motivation & End Objectives
+
+### Targeting
+- Primarily targets Middle Eastern organizations, but occasionally orgs outside the middle east. (MALPEDIA)
+- Specifically targets organizations chosen for strategic purposes, instead of targets of opportunity. (MALPEDIA)
+
+## PIR: What are Oilrig's TTPs?
+### Reconnaissance
+
+### Weaponaization
+-  organized evasion testing used the during development of their tools (MALPEDIA, but also get info from unit42 virustotal development lifecycle)
+
+### Delivery
+- MALPEDIA - primarily phishing (T1566), but also
+	- exploitation of patched vulnerabilities (T1190)
+	- using credentials to access public facing services like outlook web access (T1078) 
+	- supply chain compromises (T1195)
+
+### Exploitation
+
+### Installation
+- Custom web-shells and backdoors used to persistently access servers. (T1505)
+
+### C2
+- Use of custom DNS Tunneling protocols for command and control (C2) and data exfiltration. (T1071.004) (MALPEDIA)
+
+### Actions on Objective
+- OilRig will restart the kill chain once gaining access, using stolen account credentials for lateral movement. (T1078) (MALPEDIA)
+
+## PIR: Defensive Reccomendations?
