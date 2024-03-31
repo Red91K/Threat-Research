@@ -1,5 +1,5 @@
 {
-	"name": "layer",
+	"name": "SolviSystems MITRE ATT&CK Mapping",
 	"versions": {
 		"attack": "14",
 		"navigator": "4.9.4",
