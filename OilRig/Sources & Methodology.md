@@ -55,21 +55,45 @@ Source Reliability:
 
 
 ## cfr
-https://www.cfr.org/cyber-operations/oilrig
-https://www.cfr.org/cyber-operations/apt-34
+[OilRig | CFR Interactives](https://www.cfr.org/cyber-operations/oilrig)
+
+[APT 34 | CFR Interactives](https://www.cfr.org/cyber-operations/apt-34)
+
 
 ## unit 42
-2019
-https://unit42.paloaltonetworks.com/behind-the-scenes-with-oilrig/
+[Behind the Scenes with OilRig](https://unit42.paloaltonetworks.com/behind-the-scenes-with-oilrig/)
+
+2019, Highly comprehensive overview
 
 ## ESET
 [OilRig’s persistent attacks using cloud service-powered downloaders](https://www.welivesecurity.com/en/eset-research/oilrig-persistent-attacks-cloud-service-powered-downloaders/)
+
 2023, Specific case study of an OilRig campaign
+
+## Trend Micro
+[APT34 Deploys Phishing Attack With New Malware](https://www.trendmicro.com/en_th/research/23/i/apt34-deploys-phishing-attack-with-new-malware.html)
+
+2023, Specific case study
+
+## Symantec
+[Crambus: New Campaign Targets Middle Eastern Government | Symantec Enterprise Blogs](https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/crambus-middle-east-government)
+
+2023, Specific case study
+
+## Fortinet
+[Please Confirm You Received Our APT | FortiGuard Labs ](https://www.fortinet.com/blog/threat-research/please-confirm-you-received-our-apt)
+
+2022, Specific Case Study
+
+## MITRE
+[OilRig, COBALT GYPSY, IRN2, APT34, Helix Kitten, Evasive Serpens, Group G0049 | MITRE ATT&CK&reg;](https://attack.mitre.org/groups/G0049/)
+
+Updated 2023, but contains sources from as early as 2017
+mapping to MITRE ATT&CK based on reputable secondary sources
 
 ## attackiq
 Opportunities for detection
-https://www.attackiq.com/2022/07/11/oilrig-attack-graphs-emulating-the-iranian-threat-actors-global-campaigns/
-
+[ATTACKIQ - Emulating OilRig](https://www.attackiq.com/2022/07/11/oilrig-attack-graphs-emulating-the-iranian-threat-actors-global-campaigns/)
 
 # Overall
 ## PIR: Who is Oilrig?
@@ -94,20 +118,20 @@ https://www.attackiq.com/2022/07/11/oilrig-attack-graphs-emulating-the-iranian-t
 -  organized evasion testing used the during development of their tools (MALPEDIA, but also get info from unit42 virustotal development lifecycle)
 
 ### Delivery
-- MALPEDIA - primarily phishing (T1566), but also
-	- exploitation of patched vulnerabilities (T1190)
-	- using credentials to access public facing services like outlook web access (T1078) 
-	- supply chain compromises (T1195)
+- MALPEDIA - primarily phishing (`T1566`), but also
+	- exploitation of patched vulnerabilities (`T1190`)
+	- using credentials to access public facing services like outlook web access (`T1078`) 
+	- supply chain compromises (`T1195`)
 
 ### Exploitation
 
 ### Installation
-- Custom web-shells and backdoors used to persistently access servers. (T1505)
+- Custom web-shells and backdoors used to persistently access servers. (`T1505`)
 
 ### C2
-- Use of custom DNS Tunneling protocols for command and control (C2) and data exfiltration. (T1071.004) (MALPEDIA)
+- Use of custom DNS Tunneling protocols for command and control (C2) and data exfiltration. (`T1071.004`) (MALPEDIA)
 
 ### Actions on Objective
-- OilRig will restart the kill chain once gaining access, using stolen account credentials for lateral movement. (T1078) (MALPEDIA)
+- OilRig will restart the kill chain once gaining access, using stolen account credentials for lateral movement. (`T1078`) (MALPEDIA)
 
 ## PIR: Defensive Reccomendations?
