@@ -48,24 +48,29 @@ Source Reliability:
 ## PIR: What are Oilrig's TTPs?
 - carries out supply chain attacks (uncited)
 ### Timeline of attacks & relevant TTPs
-- 2016, [Unit42-  Targeted Attacks against Banks in the Middle East](https://unit42.paloaltonetworks.com/the-oilrig-campaign-attacks-on-saudi-arabian-organizations-deliver-helminth-backdoor/)
-   - Unit42 grouped two campaigns against Saudi Arabian financial & technology and defense industries respectably into OilRig
-   - OilRig uses Spearphishing attachments (`T1598.002`)--in this campaign a macro-enabled (User Execution, Malicious File - `T1204.002`) Excel spreadsheet that displays decoy content while it installs a backdoor written in powershell(`T1059.001`) & vbscript (`T1059.005`) or just a exe file (`T1059`)
-   - the backdoor is a reverse shell that communicates over DNS or HTTP (C2 over Application Protocols`T1071.001`) using a custom protocol (Non standard encoding, `T1132.002`)
-   - automatically runs network & system discovery protocls (Account discovery, `T1087`) (Network Service discovery, `T1046`) (System information discovery, `T1082`) (Process discovery, `T1057`)
-   - a number of domains were used to host malicious files & receive c2 
-   - WHOIS registrant pointing to a Iranian email address & geolocation as well as persian characters in malware samples potentially alludes to a Iranian actor, but "it is important to remember that this data is easily falsified."
-- 2016, [Unit42](https://unit42.paloaltonetworks.com/unit42-oilrig-actors-provide-glimpse-development-testing-efforts/) reports that OilRig has been actively testing their lure files against antivirus products 
-   - "This testing activity also suggests that the threat group responsible for the OilRig attack campaign have an organized, professional operations model that includes a testing component to the development of their tools."
-   - Oilrig followed a "Very structured approach, using a baseline test sample followed by small iterative changes"
+- could be useful in identifying overall trends in OilRig's TTPs, especially given OilRig's long history as well as their willingness to shift TTPs
+- Most useful information would be the TTPs OilRig has consistently employed over their history--ie the TTPs they are likely to stick with in the future
+- Therefore, the timeline will focus on events that represent OilRig's deviations from previous activity
+
+#### 2016, [Unit42-  Targeted Attacks against Banks in the Middle East](https://unit42.paloaltonetworks.com/the-oilrig-campaign-attacks-on-saudi-arabian-organizations-deliver-helminth-backdoor/)
+- Unit42 grouped two campaigns against Saudi Arabian financial & technology and defense industries respectably into OilRig
+- OilRig uses Spearphishing attachments (`T1598.002`)--in this campaign a macro-enabled (User Execution, Malicious File - `T1204.002`) Excel spreadsheet that displays decoy content while it installs a backdoor written in powershell(`T1059.001`) & vbscript (`T1059.005`) or just a exe file (`T1059`)
+- the backdoor is a reverse shell that communicates over DNS or HTTP (C2 over Application Protocols`T1071.001`) using a custom protocol (Non standard encoding, `T1132.002`)
+- automatically runs network & system discovery protocls (Account discovery, `T1087`) (Network Service discovery, `T1046`) (System information discovery, `T1082`) (Process discovery, `T1057`)
+- a number of domains were used to host malicious files & receive c2 
+- WHOIS registrant pointing to a Iranian email address & geolocation as well as persian characters in malware samples potentially alludes to a Iranian actor, but "it is important to remember that this data is easily falsified."
+
+#### 2016, [Unit42](https://unit42.paloaltonetworks.com/unit42-oilrig-actors-provide-glimpse-development-testing-efforts/) reports that OilRig has been actively testing their lure files against antivirus products 
+- "This testing activity also suggests that the threat group responsible for the OilRig attack campaign have an organized, professional operations model that includes a testing component to the development of their tools."
+- Oilrig followed a "Very structured approach, using a baseline test sample followed by small iterative changes"
    "Testing activities ceases with a very low antivirus detection rate"
-   - "Changes made only a few minutes apart and can involve:
-Removal or location change of payload
-Modified decoy contents and sheet names
-Changes to function and variable names
-Removal of entire lines of code
-Obfuscating strings via concatenation or an alternate encoding (base64 or hexadecimal)
-Reordering of functions in the code"
+- "Changes made were only a few minutes apart and can involve:
+   - Removal or location change  of payload
+   - Modified decoy contents and sheet names
+   - Changes to function and variable names
+   - Removal of entire lines of code
+   - Obfuscating strings via concatenation or an alternate encoding (base64 or hexadecimal)
+   - Reordering of functions in the code"
 
 
 ## PIR: Defensive Reccomendations?
