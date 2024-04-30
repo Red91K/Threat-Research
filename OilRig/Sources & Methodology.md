@@ -6,9 +6,9 @@ audience:
 2. Defenders
 
 ## dissemination
-- slide deck for policymakers / buisness executives
-- written TA report for defenders
-- report on a specific campaign for defenders, mapping TTPs to 
+- slide deck for policymakers / business executives
+- written Threat Actor Profile for defenders
+- reports on (~3) specific campaign for defenders, mapping TTPs to 
 	- attack flow
 	- attack matrix
 	- diamond model
@@ -16,7 +16,7 @@ audience:
 
 ## intel requirements
 ### Who is OilRig? 
-- General information, Attribution, Capabilities
+- General information, Attribution, Capability
 > Hackers are not all the same; they range in skill, resources, and capability and often go by different names. How would you classify this threat actor? Do they go by any aliases? Where are they from? How would you rate the skill level and resources available to this threat actor? 
 
 - Motivation, Targeting, Geopolitical context
@@ -103,19 +103,22 @@ Opportunities for detection
 
 ### Capabilities
 - highly active and organized (MALPEDIA)
-- 
 
 ### Motivation & End Objectives
+- specifically focused on espionage / exfiltration of sensitive data
+	- [Symantec stated](https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/crambus-middle-east-government) in 2023, "The group is known to stage long-running intrusions for intelligence gathering and spying purposes."
+	- Even when it was linked to a destructive attack against the Alabanian government, "MSFT assessed that Crambus was involved in gaining initial access and exfiltrating data from impacted networks. Wipers were likely then deployed by other Iran-linked actors."
 
 ### Targeting
 - Primarily targets Middle Eastern organizations, but occasionally orgs outside the middle east. (MALPEDIA)
 - Specifically targets organizations chosen for strategic purposes, instead of targets of opportunity. (MALPEDIA)
 
 ## PIR: What are Oilrig's TTPs?
+
 ### Reconnaissance
 
 ### Weaponaization
--  organized evasion testing used the during development of their tools (MALPEDIA, but also get info from unit42 virustotal development lifecycle)
+-  organized evasion testing used the during development of their tools (MALPEDIA & UNIT42 virustotal development lifecycle)
 
 ### Delivery
 - MALPEDIA - primarily phishing (`T1566`), but also
@@ -133,5 +136,7 @@ Opportunities for detection
 
 ### Actions on Objective
 - OilRig will restart the kill chain once gaining access, using stolen account credentials for lateral movement. (`T1078`) (MALPEDIA)
+- Heavy use of Living-off-the-land-tools
+	ex: 2023 [campaign against Middle Eastern governments](https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/crambus-middle-east-government) featured extensive use of powershell (2023, Symantec)
 
 ## PIR: Defensive Reccomendations?
